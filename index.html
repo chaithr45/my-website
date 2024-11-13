@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR and Translation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>OCR and Translation Tool</h1>
+            <p>Upload an image or PDF to extract and translate the text.</p>
+        </header>
+        
+        <!-- File upload section -->
+        <section class="upload-section">
+            <input type="file" id="fileInput" accept="image/*,.pdf">
+            <button onclick="handleFileUpload()">Extract and Translate</button>
+        </section>
+
+        <!-- Output area -->
+        <section id="output" class="output-box">
+            <p>Your translated text will appear here...</p>
+        </section>
+
+        <!-- Translation options (if needed) -->
+        <section class="language-options">
+            <label for="targetLang">Select Language:</label>
+            <select id="targetLang">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Translator Tool | All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.0.0/dist/tesseract.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
